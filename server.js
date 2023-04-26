@@ -18,6 +18,10 @@ app.use("/login",auth)
 app.use("/admin",admin)
 app.use("/client",client)
 
+app.get("/",function(req,res){
+    res.redirect("/client")
+})
+
 
 const port = process.env.LISTEN_PORT || 3000
 app.listen(3000,function(){
