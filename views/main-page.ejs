@@ -1,0 +1,40 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/style/admin/style.css" type="text/css">
+<body>
+	<div class="navbar">
+        <img src="/style/admin/assets/images/steelcoLogo.png" class="steelcoLogo" alt="steelcoLogo">
+		<h1 style="float: right; display: inline;">Modifica o aggiungi</h1>
+	</div>
+    <div>
+        <ul class="list">
+            <li class="luogo"><h1>Stabilimento</h1></li>
+            <li class="indirizzo"><h1>Indirizzo</h1></li>
+            <li class="data"><h1>Infortunio</h1></li>
+        </ul>
+    </div>
+
+    <div>
+        <form action="/admin" method="post">
+            <%- include('partials/places') %>
+            <button type="submit" class="buttonModify">Modifica</button>
+        </form>
+        <hr>
+    </div>
+
+    <div class="addInfo">
+        <form action="/admin/add-place" method="post">
+            <ul class="list">
+                <li class="luogo"><input type="text" name="luogo" required  value="Stabilimento"></li>
+                <li class="indirizzo"><input type="text" name="indirizzo" required  value="Indirizzo"></li>
+                <li class="data"><input type="date" name="date" required id="newDateToAdd"></li>
+            </ul>
+            <button type="submit" class="buttonModify">Aggiungi</button>
+        </form>
+        <hr>
+        <button class="buttonHistory" onclick="window.location.href='/admin/storic'">Visualizza lo storico</button>
+    </div> 
+    <script src="/style/admin/script.js"></script>
+
+</body>
+
+</html>

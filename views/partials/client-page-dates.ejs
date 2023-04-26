@@ -1,0 +1,22 @@
+<ul class="list">
+    <% for( let index = 0; index < place.length; index++ ) { %>
+            <ul class="list">
+                <li class="element"><%= place[index].luogo %></li>
+                <li class="element"><%= place[index].indirizzo %></li>
+                <% 
+                    const dateNow = new Date()
+                    const date = place[index].dataIncidente
+                    var dataCorretta = dateNow - date
+                    dataCorretta = Math.ceil(dataCorretta/(1000*60*60*24) - 1)
+                %>
+                <li class="element"><%= dataCorretta %></li>
+                <% if (dataCorretta <= 0) { %>
+                    <li class="elementImages"><img src="style/client/assets/images/red.png" style="max-width: 15%" ></li>
+                <% } else if ( dataCorretta > 0 && dataCorretta < 60) { %>
+                    <li class="elementImages"><img src="style/client/assets/images/yellow.png" style="max-width: 15%"></li>
+                <%} else{ %>
+                    <li class="elementImages"><img src="style/client/assets/images/green.png"style="max-width: 15%"</li>
+                <%} %>
+            </ul>
+    <% } %>
+</ul>

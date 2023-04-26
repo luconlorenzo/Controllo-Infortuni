@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/style/admin/style.css" type="text/css">
+
+<body>
+	<div class="navbar">
+        <img src="/style/admin/assets/images/steelcoLogo.png" class="steelcoLogo" alt="steelcoLogo">
+		<h1 style="float: right; display: inline;">Accesso</h1>
+	</div>
+
+	<div class="container">	
+		<div class="left-column">
+		</div>
+
+		<div class="right-column">
+			<h1>Accedi</h1>
+			<form class="login-form" method="post" action="/login">
+				<label for="username">Username</label>
+				<input type="text" id="username" name="username" required>
+				<label for="password">Password</label>
+				<input type="password" id="password" name="password" required>
+				<button type="submit">Accedi</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

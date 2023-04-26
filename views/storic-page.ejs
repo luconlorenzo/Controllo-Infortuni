@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/style/admin/style.css" type="text/css">
+
+<body>
+    <div class="navbar">
+        <img src="/style/admin/assets/images/steelcoLogo.png" class="steelcoLogo" alt="steelcoLogo">
+        <h1 style="float: right; display: inline;">Storico</h1>
+    </div>
+    <div class="titleNameStorico">
+        <ul class="list">
+            <li class="luogo"><h1>Stabilimento</h1></li>
+            <li class="data"><h1>Infortuni</h1></li>
+        </ul>
+        
+        <hr class="divisoreStabilimentiStorico">
+    </div>
+    <% for( index = 0; index < place.length; index++ ) {%>
+    <div>
+        <div>
+            <h1 class="luogoStorico"><%= place[index].luogo %></h1>
+            <% for( i = 0; i < storico[index].length; i++ ) {%>
+                <% const dateStyle = {
+                    day: "2-digit",
+                    month: "2-digit",
+                    year: "numeric",
+                  };
+                  const date = storico[index][i].dataIncidente.toLocaleDateString("It-IT", dateStyle)
+                %>
+                <h2 class="dataStorico"><%= date %></h2>
+            <% } %>
+        </div>
+        <hr>
+    </div>
+    <% } %>
+</body>
+

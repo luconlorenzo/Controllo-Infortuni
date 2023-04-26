@@ -1,0 +1,21 @@
+<% for( let index = 0; index < place.length; index++ ) { %>
+    <hr>
+    <label>
+    <div>
+        <input type="radio" name="index" value="<%= place[index].id %>" required>
+        <ul class="list"> 
+            <li class="luogo"> <h2><%= place[index].luogo %></h2></li>
+            <li class="indirizzo"><h2><%= place[index].indirizzo %></h2> </li>
+            <% const dateStyle = {
+                day: "2-digit",
+                month: "2-digit",
+                year: "numeric",
+              };
+              const date = place[index].dataIncidente.toLocaleDateString("It-IT", dateStyle) 
+            %>
+            <li class="data"><h2><%= date %></h2></li>
+            
+        </ul>
+    </div>
+</label>
+<% } %>

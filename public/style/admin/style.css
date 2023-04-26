@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: fontIBM;
+}
+
+.navbar {
+    height: 50pt;
+    width: auto;
+    background-color: rgb(22, 56, 110);
+    color: #fff;
+    padding: 0;
+    padding-right: 10pt;
+    margin-top: 0;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    height: calc(100% - 50px);
+}
+
+.left-column {
+    flex: 1;
+    background-image: url("/style/admin/assets/images/Steelco_Academy-scaled.jpg");
+    background-size: cover;
+    background-position: center;
+    border-right: solid 5pt rgb(22, 56, 110);
+}
+
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-form {
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-form input {
+    display: block;
+    width: 95%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(22, 56, 110);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.steelcoLogo{
+    width: 50pt;
+}
+
+@font-face {
+    font-family: fontIBM;
+    src: url(/style/admin/assets/fonts/fontIBM.ttf);
+}
+.button {
+	background-color:rgb(22, 56, 110);
+	cursor:pointer;
+	color:#ffffff;
+	font-family:fontIBM;
+	font-size:20px;
+	padding:17px 35px;
+	text-decoration:none;
+    border-radius: 5px;
+}
+.button:active{
+    background-color: rgb(22, 56, 110);
+}
+
+.list{
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    justify-content:  space-between;
+    flex-wrap: wrap;
+}
+.luogo{
+    list-style: none;
+    margin-left: 10%;
+}
+.indirizzo{
+    list-style: none;
+}
+.data{
+    margin-right: 20%;
+    list-style: none;
+}
+.luogoStorico{
+    display: flex;
+    margin-left: 12%;
+}
+.dataStorico{
+    display: flex;
+    margin-left: 73%;
+}
+
+.addInfo p {
+    font-size: 20px;
+}
+
+.buttonHistory{
+    background-color:rgb(22, 56, 110);
+	cursor:pointer;
+	color:#ffffff;
+	font-family:fontIBM;
+	font-size:20px;
+	padding:17px 35px;
+	text-decoration:none;
+    border-radius: 5px;
+    display: flex;
+    margin-left: 85%;
+}
+
+.addInfo{
+    border: rgb(22, 56, 110);;
+}
+
+.buttonModify{
+    background-color:rgb(22, 56, 110);
+	cursor:pointer;
+	color:#ffffff;
+	font-family:fontIBM;
+	font-size:20px;
+	padding:17px 35px;
+	text-decoration:none;
+    border-radius: 5px;
+    display: flex;
+    margin-left: 85%;
+}

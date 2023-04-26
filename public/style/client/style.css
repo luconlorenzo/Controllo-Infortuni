@@ -1,0 +1,56 @@
+.navbar {
+    height: 50pt;
+    width: auto;
+    background-color: rgb(20, 54, 107);
+    color: #fff;
+    padding: 0;
+    padding-right: 10pt;
+    margin-top: 0;
+    flex-wrap: wrap;
+    position: relative;
+}
+.steelcoLogo{
+    width: 50pt;
+}
+
+body{
+    background-color: rgba(20, 53, 107, 0.13);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: fontIBM;
+}
+
+@font-face {
+    font-family: fontIBM;
+    src: url(assets/fonts/fontIBM.ttf);
+}
+
+
+.view{
+    margin-top: 35pt;
+    margin-left: 40pt;
+    margin-right: 40pt;
+    margin-bottom: 35pt;
+    background-color: rgb(239, 239, 239);
+    font-size: 3em;
+}
+
+.element{
+    list-style: none;
+    margin-right: 7%;
+    float: left;   
+}
+
+.list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.elementImages{
+    list-style: none;
+    float: right;
+}

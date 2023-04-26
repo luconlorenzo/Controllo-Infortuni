@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/style/admin/style.css" type="text/css">
+<body>
+    <div class="navbar">
+        <img src="/style/admin/assets/images/steelcoLogo.png" class="steelcoLogo" alt="steelcoLogo">
+		<h1 style="float: right; display: inline;">Modifica</h1>
+	</div>
+    <form action="/admin/<%= place.id %>" method="post">
+        <input type="text" name="luogo" readonly value="<%= place.luogo %>" >
+        <input type="text" name="indirizzo" readonly value="<%= place.indirizzo %>" >
+        <%  const date = place.dataIncidente.toISOString().split('T')[0] %>
+        <input type="date" value="<%= date %>" name="newDate">
+        <button type="submit" class="button">Invia</button>
+    </form>
+</body>
